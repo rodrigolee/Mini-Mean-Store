@@ -1,0 +1,16 @@
+<h2>Add a new Customer</h2>
+<input type="text" ng-model="newUser.name" value="user.name">
+<button ng-click="addUser(newUser)">Add</button>
+<input type="search" ng-model="customer_filter"placeholder="search name..">
+<table>
+    <tr>
+      <th>Customer Name</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+    <tr ng-repeat="users in user | filter: customer_filter">
+      <td>{{users.name}}</td>
+      <td ng-bind="users.createdAt | date:'MMMM dd, yyyy'"></td>
+      <td><button ng-click="delete(users._id)">Delete</button></td>
+    </tr>
+  </table>

@@ -1,0 +1,13 @@
+<h2>Products</h2>
+<div ng-controller="ProductController" ng-repeat="products in product">
+  <a>{{products.name}}</a>
+  <a>({{products.quantity}} left)</a>
+</div>
+<h2>Recent Orders</h2>
+<div ng-controller= "OrderController" ng-repeat="orders in order">
+  <p>{{orders.customer}} purchased {{orders.quantity}} {{orders.product.name}} at ({{orders.createdAt}})</p>
+</div>
+<h2>New Customers</h2>
+<div ng-controller= "CustomerController" ng-repeat="users in user">
+  <p>{{users.name}} joined the store ({{users.createdAt}})</p>
+</div>

@@ -1,0 +1,20 @@
+<h2>Add a new Order</h2>
+Customer:<select ng-model='newOrder.user'><option ng-repeat="users in user" value="{{users._id}}">{{users.name}}</option></select>
+Product Name:<select ng-model="newOrder.product"><option ng-repeat="products in product" value="{{products._id}}">{{products.name}}</option></select>
+Order:<input type="number" ng-model="newOrder.quantity">
+<button ng-click="addOrder(newOrder)">Order</button>
+<input type="text" name="searchProduct" placeholder="search products..">
+<table>
+    <tr>
+      <th>Customer Name</th>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Date</th>
+    </tr>
+    <tr ng-repeat="orders in order">
+      <td>{{orders.user.name}}</td>
+      <td>{{orders.product.name}}</td>
+      <td>{{orders.quantity}}</td>
+      <td ng-bind="orders.createdAt | date:'MMMM dd, yyyy'"></td>
+    </tr>
+  </table>

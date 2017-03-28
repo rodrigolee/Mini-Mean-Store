@@ -1,0 +1,20 @@
+{
+  "name": "store",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Rodrigo Lee <rodrigoleee@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rodrigolee/DojoAssignments",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.3"
+  }
+}

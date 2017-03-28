@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Store</title>
+      <script src="angular/angular.js" charset="utf-8"></script>
+      <script src="angular-route/angular-route.js" charset="utf-8"></script>
+      <script src="assets/app.js" charset="utf-8"></script>
+      <script src="assets/storeFactory.js" charset="utf-8"></script>
+      <script src="assets/customerController.js" charset="utf-8"></script>
+      <script src="assets/orderController.js" charset="utf-8"></script>
+      <script src="assets/productController.js" charset="utf-8"></script>
+      <script src="assets/dashboardController.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Mini Store</h1>
+    <input type="search" ng-model="filter">
+    <button type="button" name="button">Filter</button>
+    <a href="#!/">Dashboard</a>
+    <a href="#!/products">Products</a>
+    <a href="#!/orders">Orders</a>
+    <a href="#!/customers">Customers</a>
+    <a href="#!/settings">Settings</a>
+    <div ng-view=" |filter: filter">
+    </div>
+  </body>
+</html>
