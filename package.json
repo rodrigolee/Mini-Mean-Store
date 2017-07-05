@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-cookies": "^1.6.5",
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
     "express": "^4.15.2",
-    "mongoose": "^4.9.1"
+    "express-session": "^1.15.3",
+    "mongoose": "^4.9.1",
+    "ng-cookies": "^1.0.2"
   }
 }

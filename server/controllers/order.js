@@ -33,5 +33,14 @@ module.exports = {
           })
         }
       })
-    }
+    },
+    delete: function(req,res){
+      Order.findOne({_id:req.params.id}, function(err, data){
+        if(data== null){
+          res.status(400).send("No order Found");
+        }
+        data.remove();
+        res.status(200).send('order was deleted');
+      })
+    },
   }

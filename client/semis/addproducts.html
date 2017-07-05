@@ -1,0 +1,59 @@
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Add Product</legend>
+    <div class="form-group">
+      <label for="inputProduct" class="col-lg-2 control-label">Product Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputProduct" ng-model="newProduct.name" value="product.name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Description</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea" textarea ng-model="newProduct.description" value="product.description"></textarea>
+        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="quantity" class="col-xs-2 control-label">Quantity</label>
+      <div class="col-lg-10">
+        <input type="number" ng-model="newProduct.quantity">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Radios</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            New
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Used
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Product Quality</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select" ng-model="newProduct.quality">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default"><a href="#!/products">Cancel</a></button>
+        <button type="submit" ng-click="addProduct(newProduct)" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

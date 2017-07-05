@@ -1,4 +1,5 @@
 app.controller('CustomerController', ['$scope', 'storeFactory', '$routeParams',function($scope, storeFactory, $routeParams){
+//implement into logincontroller
   $scope.addUser = function(user) {
       console.log(user)
       storeFactory.newUser(user, function(output){

@@ -1,13 +1,27 @@
-<h2>Products</h2>
-<div ng-controller="ProductController" ng-repeat="products in product">
-  <a>{{products.name}}</a>
-  <a>({{products.quantity}} left)</a>
+<!-- <h2>Products</h2> -->
+<div ng-controller="ProductController">
+  <div class="panel panel-info">
+    <div class="panel-heading">Products</div>
+    <div class="panel-body" ng-repeat="products in product">
+      <p>{{products.name}} ({{products.quantity}} left)</p>
+    </div>
+  </div>
 </div>
-<h2>Recent Orders</h2>
-<div ng-controller= "OrderController" ng-repeat="orders in order">
-  <p>{{orders.customer}} purchased {{orders.quantity}} {{orders.product.name}} at ({{orders.createdAt}})</p>
+<div ng-controller= "OrderController">
+  <div class="panel panel-info">
+    <div class="panel-heading">Orders</div>
+    <div class="panel-body" ng-repeat="orders in order">
+  <p>{{orders.user.name}} purchased {{orders.quantity}} {{orders.product.name}} at ({{orders.createdAt}})</p>
+    </div>
+  </div>
 </div>
-<h2>New Customers</h2>
-<div ng-controller= "CustomerController" ng-repeat="users in user">
-  <p>{{users.name}} joined the store ({{users.createdAt}})</p>
+<div ng-controller= "CustomerController">
+  <div class="panel panel-info">
+    <div class="panel-heading">Customers</div>
+    <div class="panel-body" ng-repeat="users in user">
+      <p>{{users.name}} joined the store ({{users.createdAt}})</p>
+    </div>
+  </div>
 </div>
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->

@@ -14,7 +14,7 @@ app.controller('OrderController', ['$scope', 'storeFactory','$routeParams',funct
       $scope.order=data;
     })
   }
-
+  getOrders();
   getCustomers();
   getProducts();
   $scope.addOrder=function(order) {
@@ -27,5 +27,8 @@ app.controller('OrderController', ['$scope', 'storeFactory','$routeParams',funct
       }
     });
     $scope.newOrder={};
-}
+  }
+    $scope.delete=function(id, callback){
+      storeFactory.deleteOrder(id, getOrders);
+    }
 }])

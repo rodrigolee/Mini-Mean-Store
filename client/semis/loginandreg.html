@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ="app">
+<head>
+  <meta charset="UTF-8">
+  <title>LoginandReg</title>
+  <script src = 'angular/angular.js'></script>
+  <script src = 'angular-route/angular-route.js'></script>
+  <script src = 'angular-cookies/angular-cookies.js'></script>
+  <script src="assets/login.js" charset="utf-8"></script>
+</head>
+<body>
+  <!-- <form ng-model = "registration" ng-submit = "register()">
+    {{errors.first_name.message}}
+    <input type="text" ng-model = "user.name" placeholder= "first name">
+    <input type="email"  ng-model = "user.email" placeholder= "email">
+    {{errors.password.message}}
+    <input type="password"  ng-model = "user.password" placeholder= "password">
+    <input type="password" ng-model = "user.confirm_password" placeholder= "confirm password">
+    {{errors.birthday.message}}
+    <input type="date" ng-model = "user.birthday">
+    <input type="submit" value = "register">
+  </form> -->
+  <form class="form-horizontal" ng-model = "userLogin" ng-submit="login()">
+    <fieldset>
+      <legend>Login</legend>
+      <div class="form-group">
+        {{errors.login_reg.message}}
+        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+        <div class="col-lg-10">
+          <input type="email"  ng-model = "userLogin.email"><br>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+        <div class="col-lg-10">
+            <input type="password"  ng-model = "userLogin.password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary" value = "login">Login</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+<form class="form-horizontal" ng-model = "registration" ng-submit = "register()">
+  <fieldset>
+    <legend>Register</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="email" ng-model = "user.email" class="form-control" id="inputEmail">
+      </div>
+    </div>
+    <div class="form-group">
+      {{errors.first_name.message}}
+      <label for="inputName" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputName" ng-model="user.name">
+      </div>
+    </div>
+    <div class="form-group">
+      {{errors.password.message}}
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="inputPassword" ng-model="user.password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPWConfirm" class="col-lg-2 control-label">Confirm Password</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="inputPWConfirm" ng-model="user.confirm_password">
+      </div>
+    </div>
+    <div class="form-group">
+      {{errors.birthday.message}}
+      <label for="birthday" class="col-lg-2 control-label">Birthday</label>
+      <div class="col-lg-10">
+        <input type="date" class="form-control" id="userBirthday" ng-model="user.birthday">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary" value = "register">Register</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</body>

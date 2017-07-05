@@ -42,7 +42,7 @@ app.factory('storeFactory', ['$location','$http', function($location, $http) {
   }
   factory.newProduct = function(products, callback){
       $http({
-        url:'/products',
+        url:'/products/add',
         method:'POST',
         data:products
       }).then(function(res){
