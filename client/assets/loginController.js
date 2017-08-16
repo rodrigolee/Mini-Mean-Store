@@ -1,4 +1,4 @@
-app.controller('LoginController', ['$scope', 'usersFactory', function($scope, uF){
+app.controller('LoginController', ['$scope', 'userFactory', function($scope, uF){
 
   $scope.register = function(){
 //combine with customer controller

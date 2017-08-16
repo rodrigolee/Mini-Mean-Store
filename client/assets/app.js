@@ -28,8 +28,8 @@ app.config(function ($routeProvider) {
     templateUrl:'partials/settings.html'
   })
   .when('/login',{
-    templateUrl:'semis/loginandreg.html',
-    controller:'LoginController'
+    templateUrl:'semis/loginandreg.html'
+    // controller:'LoginController'
   })
   .when('/contact',{
     templateUrl:'partials/settings.html'

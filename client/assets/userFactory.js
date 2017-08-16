@@ -1,6 +1,4 @@
-var app = angular.module('app', ['ngRoute']);
-
-app.factory('usersFactory', ['$http', function($http) {
+app.factory('userFactory', ['$http', function($http) {
   var usersFactory = function(){
     this.login = function(data,callback,errback){
       $http.post('/login',data).then(callback,errback);
